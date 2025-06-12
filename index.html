@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>midu.links - Enlaces de midudev y cursos</title>
-  <link rel="stylesheet" href="./assets/output.css">
+  <title>Curso</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
 </head>
 
-<body class="max-w-xl mx-auto
-  min-h-dvh
-  bg-gradient-to-b from-black via-sky-950 to-gray-800
-
-">
-  <header class="text-white">
-    <img alt="midudev sonriendo" src="./assets/me-big.webp"
-      class="h-[50vh] object-cover mask-radial-at-center mask-radial-from-45% mask-radial-to-80% animate-pulse-fade-in">
-
-    <header class="flex flex-col justify-center items-center mb-8 -mt-4">
+<body class="relative max-w-2xl mx-auto min-h-dvh bg-gradient-to-b from-black via-sky-950 to-gray-800 overflow-x-hidden">
+  <!-- GSAP Starred Red Carpet Background Canvas -->
+  <canvas id="gsap-bg-canvas" class="pointer-events-none select-none fixed inset-0 w-full h-full z-0"
+    style="min-height:100vh; min-width:100vw;"></canvas>
+  <div class="relative z-10">
+    <header class="text-white flex flex-col items-center py-8">
+      <img alt="Samuel Pereira Alejandro Pereira Araujo" src="./assets/samuel.jpg"
+        class="h-48 w-48 rounded-full object-cover border-4 border-sky-500 shadow-lg mb-4 animate-pulse-fade-in">
+      <h1 class="text-4xl font-extrabold font-display text-center mb-2">Samuel Alejandro<br><span
+          class="text-sky-400"> Pereira Araujo</span></h1>
       <span class="
         text-sky-400 text-xl
         font-mono px-3 py-1
@@ -26,166 +27,167 @@
         cursor-crosshair
         z-10
       ">
-        @midudev
+        @sham652003
         <svg class="ml-1 w-5 h-5 text-sky-400 inline" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
           <path fill-rule="evenodd"
             d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707a1 1 0 00-1.414-1.414L9 11.172l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
             clip-rule="evenodd" />
         </svg>
       </span>
-
-      <h1 class="text-3xl font-extrabold leading-tight mt-1 font-display">
-        Miguel Ángel Durán
-      </h1>
+      <p class="text-lg text-center max-w-xl mb-4" >Desarrollador web apasionado por la tecnología, la innovación y el
+        aprendizaje continuo. Ayudo a empresas y personas a crecer en el mundo digital.</p>
+      <div class="flex gap-3 justify-center mb-2">
+        <a href="#contacto"
+          class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-6 rounded-full transition">Contáctame</a>
+        <a href="#proyectos"
+          class="bg-white text-sky-700 font-bold py-2 px-6 rounded-full border border-sky-500 hover:bg-sky-100 transition">Ver
+          proyectos</a>
+      </div>
     </header>
 
-    <section class="flex gap-2 justify-center">
-      <a class="bg-purple-100 social-button animate-slide-up-fade" href="https://twitch.tv/midudev" target="_blank"
-        aria-label="Twitch" title="Ir a Twitch de @midudev">
-        <svg width="28" height="28">
-          <use xlink:href="./assets/sprite.svg#twitch" />
-        </svg>
-      </a>
+    <main class="px-4 pb-16">
+      <!-- Sobre mí -->
+      <section class="section-animate bg-black/60 rounded-2xl p-6 mb-8 shadow-lg">
+        <h2 class="section-title text-4xl sm:text-5xl font-extrabold mb-6 bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_4px_24px_rgba(0,200,255,0.7)] tracking-tight">
+          Sobre mí
+        </h2>
+        <p class="text-white/90 mb-2">Soy un desarrollador web con experiencia en frontend y backend, especializado en
+          crear soluciones digitales modernas, accesibles y eficientes. Me encanta aprender nuevas tecnologías y compartir
+          conocimiento con la comunidad.</p>
+        <ul class="list-disc list-inside text-white/80">
+          <li>+5 años de experiencia en desarrollo web</li>
+          <li>Apasionado por la docencia y la divulgación tecnológica</li>
+          <li>En constante formación y actualización</li>
+        </ul>
+      </section>
 
-      <a class="bg-zinc-900 social-button animate-slide-up-fade animate-delay-100" href="https://github.com/midudev"
-        target="_blank" aria-label="GitHub" title="Ir a GitHub de @midudev">
-        <svg width="28" height="28">
-          <use xlink:href="./assets/sprite.svg#github" />
-        </svg>
-      </a>
+      <!-- Habilidades -->
+      <section class="section-animate mb-8">
+        <h2 class="section-title text-4xl sm:text-5xl font-extrabold mb-6 bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_4px_24px_rgba(0,200,255,0.7)] tracking-tight">Habilidades</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          <div class="skill-card bg-sky-900/60 rounded-xl p-4 flex flex-col items-center cursor-pointer transition-transform">
+            <svg width="36" height="36">
+              <use xlink:href="./assets/sprite.svg#react" />
+            </svg>
+            <span class="mt-2 font-semibold">React</span>
+          </div>
+          <div class="skill-card bg-sky-900/60 rounded-xl p-4 flex flex-col items-center cursor-pointer transition-transform">
+            <svg width="36" height="36">
+              <use xlink:href="./assets/sprite.svg#node" />
+            </svg>
+            <span class="mt-2 font-semibold">Node.js</span>
+          </div>
+          <div class="skill-card bg-sky-900/60 rounded-xl p-4 flex flex-col items-center cursor-pointer transition-transform">
+            <svg width="36" height="36">
+              <use xlink:href="./assets/sprite.svg#html" />
+            </svg>
+            <span class="mt-2 font-semibold">HTML5</span>
+          </div>
+          <div class="skill-card bg-sky-900/60 rounded-xl p-4 flex flex-col items-center cursor-pointer transition-transform">
+            <svg width="36" height="36">
+              <use xlink:href="./assets/sprite.svg#css" />
+            </svg>
+            <span class="mt-2 font-semibold">CSS3</span>
+          </div>
+          <div class="skill-card bg-sky-900/60 rounded-xl p-4 flex flex-col items-center cursor-pointer transition-transform">
+            <svg width="36" height="36">
+              <use xlink:href="./assets/sprite.svg#github" />
+            </svg>
+            <span class="mt-2 font-semibold">Git & GitHub</span>
+          </div>
+          <div class="skill-card bg-sky-900/60 rounded-xl p-4 flex flex-col items-center cursor-pointer transition-transform">
+            <span class="text-2xl">⚡</span>
+            <span class="mt-2 font-semibold">Aprendizaje rápido</span>
+          </div>
+        </div>
+      </section>
 
-      <!-- Instagram -->
-      <a class="social-button animate-slide-up-fade animate-delay-200 bg-gradient-to-tr from-yellow-300 via-pink-600 to-purple-600"
-        href="https://instagram.com/midudev" target="_blank" aria-label="Instagram" title="Ir a Instagram de @midudev">
-        <svg width="28" height="28">
-          <use xlink:href="./assets/sprite.svg#instagram" />
-        </svg>
-      </a>
+      <!-- Proyectos destacados -->
+      <section id="proyectos" class="section-animate mb-8">
+        <h2 class="section-title text-4xl sm:text-5xl font-extrabold mb-6 bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_4px_24px_rgba(0,200,255,0.7)] tracking-tight">Proyectos destacados</h2>
+        <div class="space-y-4">
+          <div class="bg-black/60 rounded-xl p-4 flex flex-col sm:flex-row items-center gap-4 shadow">
+            <div class="flex-1">
+              <h3 class="font-bold text-lg text-white">Plataforma de Cursos Online</h3>
+              <p class="text-white/80 text-sm">Desarrollo de una plataforma educativa con React, Node.js y MongoDB,
+                permitiendo a usuarios acceder a cursos, videos y foros.</p>
+            </div>
+            <a href="#" class="text-sky-400 font-semibold hover:underline">Ver más</a>
+          </div>
+          <div class="bg-black/60 rounded-xl p-4 flex flex-col sm:flex-row items-center gap-4 shadow">
+            <div class="flex-1">
+              <h3 class="font-bold text-lg text-white">Sitio web personal</h3>
+              <p class="text-white/80 text-sm">Landing page profesional para mostrar mi portafolio, habilidades y formas
+                de contacto, usando Tailwind CSS y animaciones modernas.</p>
+            </div>
+            <a href="#" class="text-sky-400 font-semibold hover:underline">Ver más</a>
+          </div>
+        </div>
+      </section>
 
-      <!-- YouTube -->
-      <a class="bg-white social-button animate-slide-up-fade animate-delay-300" href="https://youtube.com/midudev"
-        target="_blank" aria-label="YouTube" title="Ir a YouTube de @midudev">
-        <svg width="28" height="28">
-          <use xlink:href="./assets/sprite.svg#youtube" />
-        </svg>
-      </a>
-
-      <!-- X (Twitter) -->
-      <a class="bg-black social-button animate-slide-up-fade animate-delay-400" href="https://x.com/midudev"
-        target="_blank" aria-label="X" title="Ir a X de @midudev">
-        <svg width="28" height="28">
-          <use xlink:href="./assets/sprite.svg#x" />
-        </svg>
-      </a>
-
-      <!-- LinkedIn -->
-      <a class="bg-white social-button animate-slide-up-fade animate-delay-500" href="https://linkedin.com/in/midudev"
-        target="_blank" aria-label="LinkedIn" title="Ir a LinkedIn de @midudev">
-        <svg width="28" height="28">
-          <use xlink:href="./assets/sprite.svg#linkedin" />
-        </svg>
-      </a>
-    </section>
-
-    <p class="text-midu-lol text-center mt-4 text-sm px-4 text-balance">
-      Divulgador de programación, streamer y creador de contenido. Enseñando JavaScript, React, Node.js de forma
-      divertida
-    </p>
-
-    <main class="pt-4 px-4 pb-16">
-      <div class="grid grid-cols-3 grid-rows-2 gap-2 w-full">
-        <a href="https://cursoreact.dev" class="
-          relative rounded-3xl overflow-hidden
-          bg-gradient-to-br from-cyan-900 via-cyan-700 to-cyan-500
-          border border-cyan-900
-          flex flex-col items-start
-          hover:scale-105 hover:contrast-125
-          transition
-          group
-          col-span-2 p-7 min-h-[180px]
-        ">
-          <span
-            class="absolute bottom-2 left-4 font-bold text-2xl group-hover:-translate-y-1 transition-transform">React.js</span>
-
-          <svg
-            class="absolute -right-4 -bottom-4 -rotate-6 size-28 group-hover:-rotate-12 group-hover:scale-125 transition-transform"
-            width="100" height="100">
-            <use xlink:href="./assets/sprite.svg#react" />
-          </svg>
-
-          <span class="absolute top-2 left-4 text-xs border rounded-xl px-1 py-0.5">Curso de +14 clases</span>
-        </a>
-
-        <a href="https://midu.link/html" class="
-          relative rounded-3xl overflow-hidden
-          bg-gradient-to-br from-html via-orange-300 to-white
-          border border-html
-          flex flex-col items-start
-          hover:scale-105 hover:contrast-125
-          transition
-          group
-          col-span-1 p-7 min-h-[180px]
-        ">
-          <span
-            class="absolute bottom-2 left-4 font-bold text-2xl group-hover:-translate-y-1 transition-transform">HTML</span>
-
-          <svg
-            class="absolute -right-4 -bottom-4 -rotate-6 size-28 group-hover:-rotate-12 group-hover:scale-125 transition-transform"
-            width="100" height="100">
-            <use xlink:href="./assets/sprite.svg#html" />
-          </svg>
-
-          <span class="absolute top-2 left-4 text-xs border rounded-xl px-1 py-0.5">Para principiantes</span>
-        </a>
-
-        <a href="https://midu.link/html" class="
-          relative rounded-3xl overflow-hidden
-          bg-gradient-to-br from-[#663399] via-[#8e44ad] to-white
-          border border-[#663399]
-          flex flex-col items-start
-          hover:scale-105 hover:contrast-125
-          transition
-          group
-          col-span-1 p-7 min-h-[180px]
-        ">
-          <span
-            class="absolute bottom-2 left-4 font-bold text-2xl group-hover:-translate-y-1 transition-transform">CSS</span>
-
-          <svg
-            class="absolute -right-4 -bottom-4 -rotate-6 size-28 group-hover:-rotate-12 group-hover:scale-125 transition-transform"
-            width="100" height="100">
-            <use xlink:href="./assets/sprite.svg#css" />
-          </svg>
-
-          <span class="absolute top-2 left-4 text-xs border rounded-xl px-1 py-0.5">Para principiantes</span>
-        </a>
-
-        <a href="https://cursoreact.dev" class="
-          relative rounded-3xl overflow-hidden
-          bg-gradient-to-br from-[#215732] via-[#3C873A] to-[#8CC84B]
-          border border-[#215732]
-          flex flex-col items-start
-          hover:scale-105 hover:contrast-125
-          transition
-          group
-          col-span-2 p-7 min-h-[180px]
-        ">
-          <span
-            class="absolute bottom-2 left-4 font-bold text-2xl group-hover:-translate-y-1 transition-transform">Node.js</span>
-
-          <svg
-            class="absolute -right-4 -bottom-4 -rotate-6 size-28 group-hover:-rotate-12 group-hover:scale-125 transition-transform"
-            width="100" height="100">
-            <use xlink:href="./assets/sprite.svg#node" />
-          </svg>
-
-          <span class="absolute top-2 left-4 text-xs border rounded-xl px-1 py-0.5">Curso de +14 clases</span>
-        </a>
-      </div>
+      <!-- Contacto -->
+      <section id="contacto" class="section-animate bg-black/60 rounded-2xl p-6 shadow-lg">
+        <h2 class="section-title text-4xl sm:text-5xl font-extrabold mb-6 bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_4px_24px_rgba(0,200,255,0.7)] tracking-tight">Contacto</h2>
+        <p class="text-white/90 mb-4">¿Quieres trabajar conmigo o tienes alguna consulta? ¡Escríbeme!</p>
+        <form class="flex flex-col gap-3">
+          <input type="text" placeholder="Nombre"
+            class="rounded-lg px-4 py-2 bg-gray-800 text-white border border-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-400">
+          <input type="email" placeholder="Correo electrónico"
+            class="rounded-lg px-4 py-2 bg-gray-800 text-white border border-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-400">
+          <textarea placeholder="Mensaje" rows="3"
+            class="rounded-lg px-4 py-2 bg-gray-800 text-white border border-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-400"></textarea>
+          <button type="submit"
+            class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-6 rounded-full transition">Enviar</button>
+        </form>
+        <div class="flex gap-3 justify-center mt-6">
+          <a class="bg-purple-100 social-button" href="#" target="_blank" aria-label="Twitch" title="Twitch">
+            <svg width="28" height="28">
+              <use xlink:href="./assets/sprite.svg#twitch" />
+            </svg>
+          </a>
+          <a class="bg-zinc-900 social-button" href="#" target="_blank" aria-label="GitHub" title="GitHub">
+            <svg width="28" height="28">
+              <use xlink:href="./assets/sprite.svg#github" />
+            </svg>
+          </a>
+          <a class="social-button bg-gradient-to-tr from-yellow-300 via-pink-600 to-purple-600" href="#"
+            target="_blank" aria-label="Instagram" title="Instagram">
+            <svg width="28" height="28">
+              <use xlink:href="./assets/sprite.svg#instagram" />
+            </svg>
+          </a>
+          <a class="bg-white social-button" href="#" target="_blank" aria-label="YouTube" title="YouTube">
+            <svg width="28" height="28">
+              <use xlink:href="./assets/sprite.svg#youtube" />
+            </svg>
+          </a>
+          <a class="bg-black social-button" href="#" target="_blank" aria-label="X" title="X">
+            <svg width="28" height="28">
+              <use xlink:href="./assets/sprite.svg#x" />
+            </svg>
+          </a>
+          <a class="bg-white social-button" href="#" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+            <svg width="28" height="28">
+              <use xlink:href="./assets/sprite.svg#linkedin" />
+            </svg>
+          </a>
+        </div>
+      </section>
     </main>
 
-  </header>
+    <footer class="text-center text-white/60 text-xs py-6">
+      © 2025 Samuel Alejandro Pereira Araujo. Todos los derechos reservados.
+    </footer>
 
+
+  </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="./assets/gsap-section-animate.js"></script>
+  <script src="./assets/gsap-bg-blue.js"></script>
+  <script src="./assets/gsap-skill-magic.js"></script>
+ 
 </body>
 
 </html>
